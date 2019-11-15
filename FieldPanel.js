@@ -9,7 +9,7 @@ class FieldPanel extends Panel {
 
     this.arr = [];
     this.arr_size = 20;
-    let maxValue = 1000; //max value of an array item
+    let maxValue = 500; //max value of an array item
     for(let i = 0; i < this.arr_size; i++) {
       this.arr.push(floor(random(0, maxValue)));
     }
@@ -17,12 +17,15 @@ class FieldPanel extends Panel {
     this.staticPanel = new SortPanel(this.arr, maxValue);
     this.selectionSortPanel = new SelectionSort(this.arr, maxValue);
     this.insertionSortPanel = new InsertionSort(this.arr, maxValue);
+    this.bubbleSortPanel = new BubbleSort(this.arr, maxValue);
     this.addPanel(this.staticPanel, 0, 0);
     this.addPanel(this.selectionSortPanel, 1, 0);
     this.addPanel(this.insertionSortPanel, 0, 1);
-    this.staticPanel.setTitle('Static Panel');
-    this.selectionSortPanel.setTitle('Selection Sort Panel');
-    this.insertionSortPanel.setTitle('Insertion Sort Panel');
+    this.addPanel(this.bubbleSortPanel, 1, 1);
+    this.staticPanel.setTitle('Original Array');
+    this.selectionSortPanel.setTitle('Selection Sort');
+    this.insertionSortPanel.setTitle('Insertion Sort');
+    this.bubbleSortPanel.setTitle('Bubble Sort');
   }
 
   display(){

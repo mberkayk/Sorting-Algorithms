@@ -18,6 +18,7 @@ class SelectionSort extends SortPanel {
 
   update() {
     if(this.si == this.arr.length){
+      this.sorted = true;
       return;
     }
 

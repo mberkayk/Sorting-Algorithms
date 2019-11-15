@@ -7,6 +7,7 @@ class SortPanel extends Panel {
 
     this.arr_size = this.arr.length;
     this.maxValue = maxValue;
+    this.sorted = false;
   }
 
   update() {}
