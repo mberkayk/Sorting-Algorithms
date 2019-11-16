@@ -47,7 +47,7 @@ class Panel extends Container {
      }
    }
 
-   mousePressed(x, y){
+  mousePressed(x, y){
      if(this.layout != undefined){
        this.layout.mousePressed(x, y);
      }
